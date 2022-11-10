@@ -1,20 +1,12 @@
 package obsqura.MavenSample;
 
-import static org.junit.Assert.assertTrue;
+import org.testng.annotations.Test;
 
-import org.junit.Test;
-
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+   
+    @Test(dataProvider="newdataprovider", dataProviderClass = DataTest.class)
+    public void f(String s, String x) {
+  	  System.out.println(s+"  "+x);
     }
 }
